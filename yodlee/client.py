@@ -1,4 +1,8 @@
-import simplejson as json
+try:
+    import simplejson as json
+except ImportError:
+    import json
+
 import requests
 import time
 
