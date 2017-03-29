@@ -5,10 +5,10 @@ from setuptools import setup
 setup(
     name='yodlee',
     packages=['yodlee'],
-    version='0.1.0',
+    version='0.1.1',
     author='Ben Feeser',
     author_email='bfeeser@cogolabs.com',
-    license='Apache License 2.0',
+    license='Apache 2.0',
     url='https://github.com/cogolabs/yodlee',
     keywords='evestnet yodlee fintech account aggregation',
     install_requires=['requests>=2.13.0'],
