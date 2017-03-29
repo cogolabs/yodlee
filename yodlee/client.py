@@ -1,8 +1,3 @@
-try:
-    import simplejson as json
-except ImportError:
-    import json
-
 import requests
 import time
 
@@ -40,7 +35,7 @@ class Client(object):
 
         try:
             ret = r.json()
-        except json.JSONDecodeError:
+        except ValueError:
             ret = {}
 
         if r.status_code >= 400:
