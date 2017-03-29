@@ -1,5 +1,5 @@
 # yodlee ![Build Status](https://travis-ci.org/cogolabs/yodlee.svg) [![PyPI version](https://badge.fury.io/py/yodlee.svg)](https://badge.fury.io/py/yodlee)
-Evestnet Yodlee API Client
+[Evestnet Yodlee API Client](https://developer.yodlee.com/apidocs/index.php)
 
 ## Installation
 
