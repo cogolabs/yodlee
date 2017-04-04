@@ -108,6 +108,26 @@ class User(Client):
         params['fromDate'] = from_date
         return self.get('transactions', params=params).get('transaction', [])
 
+    def edit_transaction(
+        self,
+        transaction_id,
+        category_id,
+        container='bank',
+        category_source='SYSTEM'
+    ):
+        data = {
+            'transaction': {
+                'container': container,
+                'categoryId': category_id,
+                'categorySource': category_source
+            }
+        }
+
+        return self.put(
+            'transactions/{}'.format(transaction_id),
+            data=json.dumps(data)
+        )
+
     def get_fastlink_html(self, node_url, **extra_params):
         app_id = '10003600'
 
