@@ -74,14 +74,17 @@ class User(Client):
     def logout(self):
         return self.post('user/logout')
 
-    def update(self, first_name, last_name, **params):
+    def update(self, email, first_name, last_name):
         user = {
-            'name': {
-                'first': first_name,
-                'last': last_name
+            'user': {
+                'email': email,
+                'name': {
+                    'first': first_name,
+                    'last': last_name
+                }
             }
         }
-        return self.put('user', user)
+        return self.put('user', json=user)
 
     def unregister(self):
         return self.delete('user/unregister')
