@@ -3,8 +3,10 @@ try:
 except ImportError:
     import json
 
-import urllib
-
+try:
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 
 from .client import Client
 from .config import FASTLINK_HTML
@@ -122,7 +124,7 @@ class User(Client):
             token=r['user']['accessTokens'][0]['value'],
             rsession=self.user_token,
             redirect='true',
-            extra_params=urllib.urlencode(extra_params)
+            extra_params=urlencode(extra_params)
         )
 
     def get_rules(self):

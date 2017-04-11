@@ -23,6 +23,7 @@ class Client(object):
     def __call__(self, attr, path, *args, **kwargs):
         url = self.rest_url + path
 
+        r = None
         for i in range(config.RETRIES):
             try:
                 r = getattr(self.session, attr)(url, *args, **kwargs)
@@ -35,10 +36,10 @@ class Client(object):
 
         try:
             ret = r.json()
-        except ValueError:
+        except (AttributeError, ValueError):
             ret = {}
 
-        if r.status_code >= 400:
+        if hasattr(r, 'status_code') and r.status_code >= 400:
             raise error.get(ret)
 
         return ret

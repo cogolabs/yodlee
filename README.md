@@ -3,14 +3,46 @@
 
 ## Installation
 
-```
+```bash
 pip install yodlee
 ```
 
 ## Development
 
-- Run `pip install -r requirements.txt` to install dependencies.
-- Run `python test` to run the tests.
+```bash
+brew install pyenv
+brew install pyenv-virtualenv
+pip install tox
+
+# add lines below to .bashrc
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYTHONPATH=".:$PYTHONPATH"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:${PATH}
+
+# setup pyenv
+pyenv install 2.7.13
+pyenv install 3.3.6
+pyenv install 3.4.6
+pyenv install 3.5.3
+pyenv install 3.6.1
+pyenv global 2.7.13 3.6.1 3.5.3 3.4.6 3.3.6
+
+# run tests
+tox
+
+# develop
+pyenv virutalenv yodlee
+pip install -r requirements.txt
+
+# test after developing
+pyenv deactivate
+tox
+
+# develop again
+pyenv activate yodlee
+```
 
 ## Contributing
 
