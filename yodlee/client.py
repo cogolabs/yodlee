@@ -23,23 +23,23 @@ class Client(object):
     def __call__(self, attr, path, *args, **kwargs):
         url = self.rest_url + path
 
-        r = None
         for i in range(config.RETRIES):
             try:
                 r = getattr(self.session, attr)(url, *args, **kwargs)
             except requests.ConnectionError:
                 self.set_session()
                 time.sleep(config.RETRY_SLEEP)
-            break
+            else:
+                break
         else:
-            raise error.MaxRetriesError
+            raise error.MaxRetries
 
         try:
             ret = r.json()
-        except (AttributeError, ValueError):
+        except ValueError:
             ret = {}
 
-        if hasattr(r, 'status_code') and r.status_code >= 400:
+        if r.status_code >= 400:
             raise error.get(ret)
 
         return ret

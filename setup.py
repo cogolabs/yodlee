@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='yodlee',
     packages=['yodlee'],
-    version='0.1.3',
+    version='0.1.4',
     author='Ben Feeser',
     author_email='bfeeser@cogolabs.com',
     license='Apache 2.0',

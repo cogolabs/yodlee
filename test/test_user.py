@@ -83,7 +83,7 @@ class TestUser(Base):
         self.add_response(rules_path, method='post', status=400)
         self.add_response(rules_path, method='delete')
 
-        with self.assertRaises(error.Error):
+        with self.assertRaises(error.MaxRetries):
             self.user.set_rule(category_id=1, clause='BILL PAYMENT EVERSOURCE')
 
     def test_get_provider_accounts(self):
