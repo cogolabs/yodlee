@@ -33,7 +33,7 @@ pyenv global 2.7.13 3.6.1 3.5.3 3.4.6 3.3.6
 tox
 
 # develop
-pyenv virutalenv yodlee
+pyenv virtualenv yodlee
 pip install -r requirements.txt
 
 # test after developing
@@ -46,8 +46,8 @@ pyenv activate yodlee
 
 ## Contributing
 
-We are happy to receive your contribution if you will first please complete our [Contributor License Agreement](https://github.com/cogolabs/about/CLA.pdf).
+We are happy to receive your contribution if you first please complete our [Contributor License Agreement](https://github.com/cogolabs/about/CLA.pdf).
 
 ## License
 
-The package is available as open source under the terms of the [Apache 2 License](LICENSE.txt).
+This package is available as open source under the terms of the [Apache 2.0 License](LICENSE.txt).
