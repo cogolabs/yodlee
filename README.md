@@ -46,7 +46,7 @@ pyenv activate yodlee
 
 ## Contributing
 
-We are happy to receive your contribution if you first please complete our [Contributor License Agreement](https://github.com/cogolabs/about/CLA.pdf).
+We are happy to receive your contribution if you first please complete our [Contributor License Agreement](https://github.com/cogolabs/about/blob/master/CLA.pdf).
 
 ## License
 
