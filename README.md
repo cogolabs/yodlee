@@ -1,4 +1,4 @@
-# yodlee ![Build Status](https://travis.cogolo.net/opensource/yodlee.svg?token=t2d4sthPxRMfxMqxUJAy) [![PyPI version](https://badge.fury.io/py/yodlee.svg)](https://badge.fury.io/py/yodlee)
+# yodlee ![Build Status](https://travis.cogolo.net/opensource/yodlee.svg?token=t2d4sthPxRMfxMqxUJAy) [![PyPI version](https://img.shields.io/pypi/v/yodlee.svg)](https://pypi.python.org/pypi/yodlee) [![License](https://img.shields.io/pypi/l/yodlee.svg)](https://pypi.python.org/pypi/yodlee) [![Wheel](https://img.shields.io/pypi/wheel/yodlee.svg)](https://pypi.python.org/pypi/yodlee) [![Python Versions](https://img.shields.io/pypi/pyversions/yodlee.svg)](https://pypi.python.org/pypi/yodlee)
 [Evestnet Yodlee API Client](https://developer.yodlee.com/apidocs/index.php)
 
 ## Installation

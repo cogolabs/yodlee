@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='yodlee',
     packages=['yodlee'],
-    version='0.1.4',
+    version='0.1.5',
     author='Ben Feeser',
     author_email='bfeeser@cogolabs.com',
     license='Apache 2.0',
@@ -18,6 +18,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
