@@ -2,3 +2,4 @@ requests
 responses
 tox
 coverage
+coveralls

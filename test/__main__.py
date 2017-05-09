@@ -21,8 +21,6 @@ class Coverage:
         self.cov.html_report()
         print('\nHTML version: htmlcov/index.html')
 
-        self.cov.erase()
-
 
 if __name__ == '__main__':
     with Coverage():
