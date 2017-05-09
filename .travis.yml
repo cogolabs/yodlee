@@ -1,5 +1,4 @@
 language: python
-env: PYTHONPATH=$PYTHONPATH:$TRAVIS_BUILD_DIR
 matrix:
   include:
     - python: 2.7
