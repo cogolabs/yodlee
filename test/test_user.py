@@ -73,6 +73,14 @@ class TestUser(Base):
         r = self.user.get_transactions()
         self.assertEqual(test_data.transactions['transaction'], r)
 
+    def test_edit_transaction(self):
+        self.add_response('transactions/1', method='put')
+        self.user.edit_transaction(
+            transaction_id=1,
+            category_id=1,
+            container='bank'
+        )
+
     def test_set_rule(self):
         self.add_response('transactions/categories/rules', method='post')
         self.user.set_rule(category_id=1, clause='CHECK')
